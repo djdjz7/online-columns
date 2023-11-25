@@ -1,0 +1,181 @@
+@import "./base.css";
+@import "./fonts.css";
+
+
+#app {
+  margin: 0 auto;
+  padding: 0rem;
+  font-weight: normal;
+}
+
+button {
+  font-family: Inter;
+  @apply p-y-1 p-x-4 border-1 border-solid border-gray/40 rounded-2 text-sm
+  @apply transition-all duration-200
+  @apply focus:ring-2 ring-offset-1 ring-gray/50  
+  @apply text-black
+  @apply hover:filter-brightness-95 focus:filter-brightness-95
+  @apply hover:shadow-md;
+  @apply dark:bg-dark dark:text-light;
+}
+:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  font-family: Inter;
+  @apply p-y-2 p-x-3 border-1 border-solid border-gray/40 rounded-2 dark:bg-dark
+  @apply transition-all duration-200
+  @apply focus:ring-2 ring-offset-1 ring-gray/50
+  @apply text-dark dark:text-light;
+  @apply hover:shadow-md;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+  outline: none;
+}
+
+input::-webkit-file-upload-button {
+  font-family: Inter;
+  @apply p-y-1 p-x-4 m-r-2 border-1 border-solid border-gray/40 rounded-1 text-sm
+  @apply transition-all duration-200
+  @apply focus:ring-2 ring-offset-1 ring-gray/50  
+  @apply text-black
+  @apply hover:filter-brightness-95 focus:filter-brightness-95
+  @apply hover:shadow-md;
+}
+
+input::file-selector-button {
+  font-family: Inter;
+  @apply p-y-1 p-x-4 m-r-2 border-1 border-solid border-gray/40 rounded-1 text-sm
+  @apply transition-all duration-200
+  @apply focus:ring-2 ring-offset-1 ring-gray/50  
+  @apply text-black
+  @apply hover:filter-brightness-95 focus:filter-brightness-95
+  @apply hover:shadow-md;
+  @apply dark:bg-dark dark:text-light;
+}
+
+input[type="file"] {
+  @apply p-1 dark:text-light;
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+th,
+td {
+  --uno-gray: rgba(156, 163, 175, 1);
+  @apply border-b-1 border-b-solid border-b-gray/40
+  @apply p-2;
+}
+
+table {
+  margin: 0 auto;
+  overflow-x: auto;
+  border-spacing: 0;
+}
+
+tbody {
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
+}
+
+tr:last-child td {
+  border-bottom-width: 0;
+}
+
+tr {
+  @apply hover:bg-gray/10 hover:shadow-md
+  @apply transition-all duration-200
+  @apply cursor-pointer;
+}
+
+th {
+  @apply text-sm text-gray text-left;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 100ms ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+input[type="checkbox"] {
+  border-color: red;
+}
+input[type="checkbox"]:checked {
+  border-color: green;
+}
+input[type="checkbox"]:not(:checked) {
+  border-color: blue;
+}
+
+.toggleButton {
+  @apply focus:ring-none border-none;
+  box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px -1px rgba(255, 255, 255, 0.7) !important;
+}
+.toggleButton:hover {
+  box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px -1px rgba(255, 255, 255, 0.7) !important;
+}
+.toggleButtonToggled {
+  @apply focus:ring-none border-none;
+  box-shadow: inset 2px 2px 6px 0px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 6px 0px rgba(255, 255, 255, 0.7) !important;
+}
+.toggleButtonToggled:hover {
+  box-shadow: inset 2px 2px 6px 0px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 6px 0px rgba(255, 255, 255, 0.7) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .toggleButton {
+    @apply focus:ring-none border-none;
+    box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2),
+      -2px -2px 6px -1px rgba(255, 255, 255, 0.7) !important;
+  }
+  .toggleButton:hover {
+    box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2),
+      -2px -2px 6px -1px rgba(255, 255, 255, 0.7) !important;
+  }
+  .toggleButtonToggled {
+    @apply focus:ring-none border-none;
+    box-shadow: inset 2px 2px 6px 0px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 6px 0px rgba(150, 150, 150, 0.614) !important;
+  }
+  .toggleButtonToggled:hover {
+    box-shadow: inset 2px 2px 6px 0px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 6px 0px rgba(150, 150, 150, 0.614) !important;
+  }
+}

@@ -26,11 +26,11 @@ async function login() {
   isLoading.value = true;
   try {
     if (account.value == "") {
-      alert("Account could not be empty.");
+      alert("用户名不应当为空。");
       return;
     }
     if (password.value == "") {
-      alert("Password could not be empty.");
+      alert("密码不应当为空。");
       return;
     }
 
@@ -68,15 +68,6 @@ async function login() {
 </script>
 
 <template>
-  <div
-    absolute
-    top-0
-    bottom-0
-    left-0
-    right-0
-    flex="~ justify-center items-center col"
-  >
-    <span text-lg>在线专栏</span>
     <div flex="~ justify-center items-center col">
       <TypographyTitle>登录</TypographyTitle>
       <Input
@@ -95,7 +86,6 @@ async function login() {
       />
       <Button type="primary" m-t-4 @click="login">登录</Button>
     </div>
-  </div>
   <Modal v-model:open="protocolRef" title="Protocol Error" @ok="protocolRef = false">
     <p>
       HTTPS is not currently supported by ZY's API, and mixed content is not

@@ -3,9 +3,11 @@ import Login from '@/pages/Login.vue'
 </script>
 
 <template>
-  <Suspense absolute top-0 right-0 left-0 p-12>
-    <Login />
-  </Suspense>
+  <div flex="~ items-center justify-center" absolute top-0 right-0 left-0 p-12 h-full>
+    <div p-12 bg-white rounded-8 shadow-lg>
+      <Login />
+    </div>
+  </div>
 </template>
 
 <style>

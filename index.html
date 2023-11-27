@@ -116,6 +116,8 @@
 </style>
 <script src="particles.js"></script>
 <script>
+    if (document.location.protocol == "https:")
+        document.location.protocol == "http:";
     particlesJS.load('particles-js', '/particles.json', function () {
         console.log('callback - particles.js config loaded');
     });

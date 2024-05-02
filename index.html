@@ -132,7 +132,7 @@
                 throw Error('密码不应为空');
 
             var httpRequest = new XMLHttpRequest();
-            httpRequest.open("POST", "http://sxz.api6.zykj.org/api/TokenAuth/Login", true);
+            httpRequest.open("POST", "http://sxz.api.zykj.org/api/TokenAuth/Login", true);
             httpRequest.setRequestHeader("Content-Type", "application/json");
             httpRequest.send(JSON.stringify({
                 password,
@@ -146,7 +146,7 @@
                         var response = JSON.parse(httpRequest.responseText);
                         console.log(response);
                         if (response.success == true)
-                            window.location.href = `http://sxz.school.zykj.org/navPage.html?apiHost=http://sxz.api6.zykj.org&apiToken=${response.result.accessToken}#/list`
+                            window.location.href = `http://sxz.school.zykj.org/navPage.html?apiHost=http://sxz.api.zykj.org&apiToken=${response.result.accessToken}#/list`
                         else
                             throw Error(`${response.error.code}: ${response.error.message}`)
                     }
